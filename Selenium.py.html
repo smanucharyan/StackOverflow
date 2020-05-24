@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Selenium.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Selenium.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">selenium.webdriver </span><span class="s0">import </span><span class="s1">Chrome</span>
+<span class="s0">from </span><span class="s1">selenium.webdriver.common.keys </span><span class="s0">import </span><span class="s1">Keys</span>
+
+<span class="s1">driver = Chrome()</span>
+<span class="s0">with </span><span class="s1">Chrome() </span><span class="s0">as </span><span class="s1">driver:</span>
+    <span class="s1">driver.get(</span><span class="s2">&quot;http://the-internet.herokuapp.com/login&quot;</span><span class="s1">)</span>
+    <span class="s1">driver.maximize_window()</span>
+    <span class="s1">url = driver.current_url</span>
+    <span class="s1">title = driver.title</span>
+    <span class="s1">print(title)</span>
+    <span class="s1">print(url)</span>
+
+    <span class="s1">login_field = driver.find_element_by_id(</span><span class="s2">&quot;username&quot;</span><span class="s1">)</span>
+    <span class="s1">login_field.send_keys(</span><span class="s2">&quot;tomsmith&quot;</span><span class="s1">)</span>
+    <span class="s1">password_field = driver.find_element_by_id(</span><span class="s2">&quot;password&quot;</span><span class="s1">)</span>
+    <span class="s1">password_field.send_keys(</span><span class="s2">&quot;SuperSecretPassword!&quot; </span><span class="s1">+ Keys.ENTER)</span>
+    <span class="s1">driver.quit()</span>
+</pre>
+</body>
+</html>
