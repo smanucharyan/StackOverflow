@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver import Chrome
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from StackOverflow import HomePage
+from StackOverflowPOM import HomePage
 
 
 class TestStack2():
