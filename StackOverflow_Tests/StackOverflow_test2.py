@@ -26,6 +26,18 @@ class TestStack2():
         return HomePage.HomePage(driver)
 
 
+    def test_dev_section(self, driver):
+        driver.go_to_ForDevelopers()
+        time.sleep(2)
+        driver.show_dev_section()
+        assert (driver.show_dev_section())
+
+    def test_business_section(self, driver):
+        driver.go_to_ForBusinesses()
+        time.sleep(2)
+        driver.show_business_section()
+        assert (driver.show_business_section())
+
     def test_open_community(self, driver):
         time.sleep(2)
         driver.go_to_community()

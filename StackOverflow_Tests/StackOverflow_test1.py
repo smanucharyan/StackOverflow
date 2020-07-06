@@ -43,11 +43,3 @@ class TestStack1():
         driver.show_Customers_text()
         assert (driver.show_Customers_text())
 
-    def test_search_box(self, driver):
-        driver.go_to_search()
-        time.sleep(2)
-        driver.input_text()
-        time.sleep(2)
-        driver.show_search_result()
-        #time.sleep(2)
-        assert (driver.show_search_result())
